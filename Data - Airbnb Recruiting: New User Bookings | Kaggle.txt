@@ -1,0 +1,345 @@
+
+
+In this challenge, you are given a list of users along with their demographics, web session records, and some summary statistics. You are asked to predict which country a new user's first booking destination will be. All the users in this dataset are from the USA.
+
+There are 12 possible outcomes of the destination country: 'US', 'FR', 'CA', 'GB', 'ES', 'IT', 'PT', 'NL','DE', 'AU', 'NDF' (no destination found), and 'other'. Please note that 'NDF' is different from 'other' because 'other' means there was a booking, but is to a country not included in the list, while 'NDF' means there wasn't a booking.
+
+The training and test sets are split by dates. In the test set, you will predict all the new users with first activities after 7/1/2014 (note: this is updated on 12/5/15 when the competition restarted). In the sessions dataset, the data only dates back to 1/1/2014, while the users dataset dates back to 2010. 
+File descriptions
+
+    * train_users.csv - the training set of users
+        $ id: user id
+        $ date_account_created: the date of account creation
+        $ timestamp_first_active: timestamp of the first activity, note that it can be earlier than date_account_created or date_first_booking because a user can search before signing up
+        $ date_first_booking: date of first booking
+        $ gender
+        $ age
+        $ signup_method
+        $ signup_flow: the page a user came to signup up from
+        $ language: international language preference
+        $ affiliate_channel: what kind of paid marketing
+        $ affiliate_provider: where the marketing is e.g. google, craigslist, other
+        $ first_affiliate_tracked: whats the first marketing the user interacted with before the signing up
+        $ signup_app
+        $ first_device_type
+        $ first_browser
+        $ country_destination: this is the target variable you are to predict
+    
+    * test_users.csv - the test set of users
+        
+    * sessions.csv - web sessions log for users
+        $ user_id: to be joined with the column 'id' in users table
+        $ action
+        $ action_type
+        $ action_detail
+        $ device_type
+        $ secs_elapsed
+    
+    * countries.csv - summary statistics of destination countries in this dataset and their locations
+    
+    * age_gender_bkts.csv - summary statistics of users' age group, gender, country of destination
+    
+    * sample_submission.csv - correct format for submitting your predictions
+
+
+
+train       16 x 213,451
+test        15 x 62,096
+sessions    6 x 10,567,737
+countries   7 x 10
+ 
+
+sessions groupBy Id 135,484
+
+train:
+------------------------------------------------------------
+* id: Factor w/ 213451 levels "00k8dbf80o","024ttsjo1d",..: 476 234 142 336 242 704 609 13 293 201 ...
+* date_account_created: Factor w/ 1634 levels "2010-01-01","2010-01-02",..: 171 190 183 191 182 1 2 3
+* timestamp_first_active: num [1:213451] 2.01e+13 2.01e+13 2.01e+13 2.01e+13 2.01e+13 ...
+* date_first_booking: Factor w/ 1977 levels "","2010-01-02",..: 1 1 182 214 35 2 4 10 179 3 ...
+* gender: Factor w/ 4 levels "FEMALE","MALE",..: 4 2 1 1 4 4 1 1 1 4 ...
+* age: num [1:213451] NA 38 56 42 41 NA 46 47 50 46 ...
+* signup_method: Factor w/ 3 levels "basic","facebook",..: 2 2 1 2 1 1 1 1 1 1 ...
+* signup_flow: int [1:213451] 0 0 3 0 0 0 0 0 0 0 ...
+* language: Factor w/ 25 levels "de","en","es",..: 2 2 2 2 2 2 2 2 2 2 ...
+* affiliate_channel: Factor w/ 8 levels "content","direct",..: 2 5 2 2 2 3 3 2 3 3 ...
+* affiliate_provider: Factor w/ 18 levels "craigslist","direct",..: 2 4 2 2 2 5 1 2 1 1 ...
+* first_affiliate_tracked: Factor w/ 8 levels "","linked","omg",..: 6 6 6 6 6 3 6 3 6 3 ...
+* signup_app: Factor w/ 4 levels "Moweb","Web",..: 2 2 2 2 2 2 2 2 2 2 ...
+* first_device_type: Factor w/ 9 levels "Android Phone",..: 6 6 8 6 6 6 6 6 6 6 ...
+* first_browser: Factor w/ 52 levels "Android Browser",..: 3 3 7 6 3 3 11 11 11 6 ...
+* country_destination: Factor w/ 12 levels "CA","DE","ES",..: 7 7 11 9 11 11 11 11 11 11 ...
+
+test:
+----------------------------------------------------------------------------
+* id: Factor w/ 62096 levels "038sonvxoa","03dhyin1wr",..: 143 550 949 157 354 795 472 818 91 617 ...
+* date_account_created: Factor w/ 92 levels "2014-07-01","2014-07-02",..: 1 1 1 1 1 1 1 1 1 1 ...
+* timestamp_first_active: num [1:62096] 2.01e+13 2.01e+13 2.01e+13 2.01e+13 2.01e+13 ...
+* date_first_booking: logi [1:62096] NA NA NA NA NA NA ...
+* gender: Factor w/ 4 levels "FEMALE","MALE",..: 1 3 3 3 3 1 2 3 3 3 ...
+* age: num [1:62096] 35 NA NA NA NA 28 48 NA NA NA ...
+* signup_method: Factor w/ 4 levels "basic","facebook",..: 2 1 1 1 1 1 1 1 1 1 ...
+* signup_flow: int [1:62096] 0 0 0 0 0 0 25 0 0 0 ...
+* language: Factor w/ 24 levels "de","en","es",..: 2 2 2 2 2 2 2 2 2 2 ...
+* affiliate_channel: Factor w/ 7 levels "content","direct",..: 2 2 2 2 2 5 2 2 2 6 ...
+* affiliate_provider: Factor w/ 17 levels "baidu","bing",..: 4 4 4 4 4 7 4 4 4 7 ...
+* first_affiliate_tracked: Factor w/ 8 levels "","linked","marketing",..: 7 7 2 2 7 4 7 7 7 4 ...
+* signup_app: Factor w/ 4 levels "Android","iOS",..: 3 3 4 4 4 4 2 4 4 4 ...
+* first_device_type: Factor w/ 9 levels "Android Phone",..: 5 5 9 9 6 9 5 6 6 9 ...
+* first_browser: Factor w/ 31 levels "Android Browser",..: 8 8 3 6 10 3 11 3 3 5 ...
+
+
+test:
+----------------------------------------------------------------------------
+id: Factor w/ 62096 levels "038sonvxoa","03dhyin1wr",..: 143 550 949 157 354 795 472 818 91 617 ...
+date_account_created: Factor w/ 92 levels "2014-07-01","2014-07-02",..: 1 1 1 1 1 1 1 1 1 1 ...
+
+timestamp_first_active: num [1:62096] 2.01e+13 2.01e+13 2.01e+13 2.01e+13 2.01e+13 ...
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+2.014e+13 2.014e+13 2.014e+13 2.014e+13 2.014e+13 2.014e+13 
+
+date_first_booking: logi [1:62096] NA NA NA NA NA NA ...
+   Mode    NA's 
+logical   62096 
+
+gender: Factor w/ 4 levels "FEMALE","MALE",..: 1 3 3 3 3 1 2 3 3 3 ...
+   FEMALE      MALE -unknown-     OTHER 
+    14483     13769     33792        52 
+
+age: num [1:62096] 35 NA NA NA NA 28 48 NA NA NA ...
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   1.00   26.00   31.00   37.62   40.00 2002.00   28876 
+
+signup_method: Factor w/ 4 levels "basic","facebook",..: 2 1 1 1 1 1 1 1 1 1 ...
+   basic facebook   google    weibo 
+   45325    14856     1892       23 
+
+signup_flow: int [1:62096] 0 0 0 0 0 0 25 0 0 0 ...
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   0.000   0.000   7.814  23.000  25.000 
+
+language: Factor w/ 24 levels "de","en","es",..: 2 2 2 2 2 2 2 2 2 2 ...
+       de        en        es        fr        it        ko        nl        no 
+      245     59224       259       336       119       369        37        21 
+       sv        zh        ca        cs        da        el        fi        hu 
+       54      1002         1        17        17         6         6         7 
+       id        ja        pl        pt        ru        th        tr -unknown- 
+        1       120        21        82       119         4        28         1 
+
+affiliate_channel: Factor w/ 7 levels "content","direct",..: 2 2 2 2 2 5 2 2 2 6 ...
+      content        direct         other   remarketing     sem-brand 
+          170         43844           586           172         10394 
+sem-non-brand           seo 
+         1231          5699 
+
+affiliate_provider: Factor w/ 17 levels "baidu","bing",..: 4 4 4 4 4 7 4 4 4 7 ...
+              baidu                bing          craigslist              direct 
+                  3                1391                   4               43844 
+    email-marketing            facebook              google               other 
+                104                1723               14263                 487 
+          padmapper               yahoo                daum facebook-open-graph 
+                 68                 157                   2                  21 
+                gsp              meetup               naver                vast 
+                  2                  11                  14                   1 
+             yandex 
+                  1 
+first_affiliate_tracked: Factor w/ 8 levels "","linked","marketing",..: 7 7 2 2 7 4 7 7 7 4 ...
+                     linked     marketing           omg       product 
+           20         15777           142         10877           797 
+tracked-other     untracked     local ops 
+          499         33949            35 
+
+signup_app: Factor w/ 4 levels "Android","iOS",..: 3 3 4 4 4 4 2 4 4 4 ...
+Android     iOS   Moweb     Web 
+   5065   15574    4256   37201 
+
+first_device_type: Factor w/ 9 levels "Android Phone",..: 5 5 9 9 6 9 5 6 6 9 ...
+     Android Phone     Android Tablet    Desktop (Other)               iPad 
+              6655                806                308               3697 
+            iPhone        Mac Desktop      Other/Unknown SmartPhone (Other) 
+             19055              16728                500                115 
+   Windows Desktop 
+             14232 
+
+first_browser: Factor w/ 31 levels "Android Browser",..: 8 8 3 6 10 3 11 3 3 5 ...
+   Android Browser BlackBerry Browser             Chrome      Chrome Mobile 
+               726                 36              14826               1916 
+           Firefox                 IE          IE Mobile      Mobile Safari 
+              5010               3676                 82              10362 
+             Opera             Safari          -unknown-       AOL Explorer 
+                40               8133              17128                  9 
+        Apple Mail           Chromium          CometBird            IBrowse 
+                 9                 10                  1                  1 
+         IceWeasel               Iron            Maxthon     Mobile Firefox 
+                 1                  7                 14                 34 
+  Nintendo Browser         Opera Mini       Opera Mobile          Pale Moon 
+                 1                  4                  2                  1 
+         SeaMonkey               Silk          SiteKiosk     Sogou Explorer 
+                 1                 48                  3                 10 
+        UC Browser         wOSBrowser     Yandex.Browser 
+                 1                  1                  3 
+
+
+train:
+-------------------------------------------------
+[1] "date_account_created"
+
+[1] "timestamp_first_active"
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+2.009e+13 2.012e+13 2.013e+13 2.013e+13 2.014e+13 2.014e+13
+
+[1] "date_first_booking"
+
+[1] "gender"
+   FEMALE      MALE     OTHER -unknown- 
+    63041     54440       282     95688 
+
+[1] "age"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   1.00   28.00   34.00   49.67   43.00 2014.00   87990 
+
+[1] "signup_method"
+   basic facebook   google 
+  152897    60008      546 
+
+[1] "signup_flow"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   0.000   0.000   3.267   0.000  25.000 
+
+[1] "language"
+    de     en     es     fr     ca     cs     da     el     fi     hr     hu 
+   732 206314    915   1172      5     32     58     24     14      2     18 
+    id     is     it     ja     ko     nl     no     pl     pt     ru     sv 
+    22      5    514    225    747     97     30     54    240    389    122 
+    th     tr     zh 
+    24     64   1632 
+
+[1] "affiliate_channel"
+      content        direct         other sem-non-brand           seo 
+         3948        137727          8961         18844          8663 
+          api   remarketing     sem-brand 
+         8167          1096         26045 
+
+[1] "affiliate_provider"
+         craigslist              direct            facebook              google 
+               3471              137426                2273               51693 
+              other                vast               baidu                bing 
+              12549                 829                  29                2328 
+               daum     email-marketing facebook-open-graph                 gsp 
+                  1                 166                 545                 453 
+             meetup               naver           padmapper                wayn 
+                347                  52                 768                   8 
+              yahoo              yandex 
+                496                  17 
+
+[1] "first_affiliate_tracked"
+                     linked           omg       product tracked-other 
+         6065         46287         43982          1556          6156 
+    untracked     local ops     marketing 
+       109232            34           139 
+
+[1] "signup_app"
+  Moweb     Web Android     iOS 
+   6261  182717    5454   19019 
+
+[1] "first_device_type"
+     Android Phone     Android Tablet    Desktop (Other)               iPad 
+              2803               1292               1199              14339 
+            iPhone        Mac Desktop      Other/Unknown    Windows Desktop 
+             20759              89600              10667              72716 
+SmartPhone (Other) 
+                76 
+
+[1] "first_browser"
+     Android Browser         AOL Explorer               Chrome 
+                 851                  245                63845 
+       Chrome Mobile             Chromium              Firefox 
+                1270                   73                33655 
+                  IE        Mobile Safari Palm Pre web browser 
+               21068                19274                    1 
+            RockMelt               Safari            -unknown- 
+                  24                45169                27266 
+          Apple Mail                Arora        Avant Browser 
+                  36                    1                    4 
+  BlackBerry Browser               Camino            CometBird 
+                  53                    9                   11 
+       Comodo Dragon             Conkeror             CoolNovo 
+                   2                    1                    6 
+       Crazy Browser                 Epic                Flock 
+                   2                    1                    2 
+           Googlebot         Google Earth            IceDragon 
+                   1                    1                    1 
+           IceWeasel            IE Mobile                 Iron 
+                  13                   36                   17 
+      Kindle Browser              Maxthon       Mobile Firefox 
+                   1                   46                   30 
+             Mozilla          NetNewsWire              OmniWeb 
+                   3                    1                    2 
+               Opera           Opera Mini         Opera Mobile 
+                 188                    4                    2 
+        Outlook 2007            Pale Moon      PS Vita browser 
+                   1                   12                    1 
+           SeaMonkey                 Silk            SiteKiosk 
+                  11                  124                   24 
+         SlimBrowser       Sogou Explorer            Stainless 
+                   2                   33                    1 
+          TenFourFox     TheWorld Browser           wOSBrowser 
+                   8                    2                    6 
+      Yandex.Browser 
+                  11
+                  
+[1] "country_destination"
+    CA     DE     ES     FR     GB     IT    NDF     NL  other     PT     US 
+  1428   1061   2249   5023   2324   2835 124543    762  10094    217  62376 
+    AU 
+   539 
+
+
+countries:
+-------------------------------------------------------------
+[1] "country_destination"
+ Factor w/ 10 levels "AU","CA","DE",..: 1 2 3 4 5 6 7 8 9 10
+AU CA DE ES FR GB IT NL PT US 
+ 1  1  1  1  1  1  1  1  1  1 
+
+[1] "lat_destination"
+ num [1:10] -26.9 62.4 51.2 39.9 46.2 ...
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ -26.85   39.64   44.05   39.80   51.89   62.39 
+
+[1] "lng_destination"
+ num [1:10] 133.28 -96.82 10.45 -2.49 2.21 ...
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-96.820  -6.738  -0.139  -4.262   9.163 133.300 
+
+[1] "distance_km"
+ num [1:10] 15298 2828 7880 7731 7683 ...
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      0    7002    7604    7182    7842   15300 
+
+[1] "destination_km2"
+ num [1:10] 7741220 9984670 357022 505370 643801 ...
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  41540  258000  431200 2974000 5967000 9985000 
+
+[1] "destination_language"
+ Factor w/ 7 levels "deu","eng","fra",..: 2 2 1 7 3 2 4 5 6 2
+deu eng fra ita nld por spa 
+  1   4   1   1   1   1   1 
+
+[1] "language_levenshtein_distance"
+ num [1:10] 0 0 72.6 92.2 92.1 ...
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    0.00   67.91   50.50   91.40   95.45 
+
+
+
+
+Sessions:
+--------------------------------------------
+* user_id: Factor w/ 135484 levels "4grx6yxeby","4rvqpxoh3h",..: 6 6 6 6 6 6 6 6 6 6 ...
+* action: Factor w/ 360 levels "","active","ajax_check_dates",..: 30 44 30 44 30 44 30 37 25 30 ...
+* action_type: Factor w/ 11 levels "","booking_request",..: 1 3 1 3 1 3 1 4 8 1 ...
+* action_detail: Factor w/ 156 levels "","cancellation_policies",..: 1 25 1 25 1 25 1 27 25 1 ...
+* device_type: Factor w/ 14 levels "Android Phone",..: 6 6 6 6 6 6 6 6 6 6 ...
+* secs_elapsed: num [1:10567737] 319 67753 301 22141 435 ...

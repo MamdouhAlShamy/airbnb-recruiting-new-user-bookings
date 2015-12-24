@@ -1,0 +1,300 @@
+sessions    6 x 10,567,737
+
+Sessions:
+--------------------------------------------
+* user_id: Factor w/ 135484 levels "4grx6yxeby","4rvqpxoh3h",..: 6 6 6 6 6 6 6 6 6 6 ...
+* action: Factor w/ 360 levels "","active","ajax_check_dates",..: 30 44 30 44 30 44 30 37 25 30 ...
+* action_type: Factor w/ 11 levels "","booking_request",..: 1 3 1 3 1 3 1 4 8 1 ...
+* action_detail: Factor w/ 156 levels "","cancellation_policies",..: 1 25 1 25 1 25 1 27 25 1 ...
+* device_type: Factor w/ 14 levels "Android Phone",..: 6 6 6 6 6 6 6 6 6 6 ...
+* secs_elapsed: num [1:10567737] 319 67753 301 22141 435 ...
+
+
+[1] "user_id"
+ Factor w/ 135484 levels "4grx6yxeby","4rvqpxoh3h",..: 6 6 6 6 6 6 6 6 6 6 ...
+NULL
+           mxqbh3ykxl 0hjoc5q8nf mjbl6rrj52 l5lgm3w5pc wg9413iaux ht8alhs4lt 
+     34496       2722       2644       2476       2424       2362       2335 
+wyv1imf8qw monrpvx2md 9z4gim1s4l h0cjxc177k a0uhiojrra vcmr2jh5ix 1m6xnhstmb 
+      2323       2264       2264       2246       2137       2085       2019 
+p1183hxzc4 e8h4qghxlg gey51ednme 5vpuk5mssg j2cvctvqve yu5bdalz2b ejpe95pcyo 
+      1938       1923       1919       1876       1861       1811       1797 
+r541x78s24 qkbkunyzq7 n4s6g3grzf bfiueza7rt b1io359wpg 8ikl7vnfa3 e81qfos71y 
+      1792       1780       1779       1753       1752       1732       1701 
+s5ez13snz0 93dulcecw0 r0rgjqbsvp 0kj6w88xa2 xboy92k1s2 e4kn8hbtui 51gxyckww4 
+      1685       1614       1612       1574       1572       1562       1548 
+78mnangc8a bp4mwnlbxs jastc45uok y6jxclnpif aoshakhg7j ak520g6ljp odhne18hum 
+      1538       1526       1518       1511       1491       1482       1458 
+egx4aad9yo baaqjavwrm tu41qoa28z zq8o3uuanp mev8jaaupc 29y8qmcfnn j4o9yr1fpp 
+      1455       1422       1410       1410       1409       1406       1405 
+st3yfveiqq wrccc4m1uw 6zeeuuxfxr k3w4kskp4o r8xsirhrjz 1vwcorqe8w c2vfjx8i7o 
+      1399       1390       1386       1382       1379       1375       1367 
+2x4a376i2j lccl7z4iv4 szbvwk1u49 6jlntmxcs3 0gii4y4ie4 r6u8u03gz0 9o8odsj9vl 
+      1365       1363       1350       1337       1332       1332       1331 
+t6q9ckz69s h0fd2340p6 i35xbvtu4s dejs5mpqg5 z3mgcgzfun y4fz9ytpz8 otp2vllabl 
+      1327       1320       1317       1308       1298       1275       1268 
+h1p33umgua vgjs764d6a lfr18hrckm ca8jmor156 9zh7tdb4jr qx0onaf56k kro83jmtt8 
+      1267       1260       1256       1254       1250       1246       1246 
+2gymyppjlo f32sz16ms9 2ye81t5oh4 o2osqeke0g wzabyiw0un 7ye6gmetue 2xwvnz848a 
+      1243       1241       1234       1234       1234       1232       1231 
+i2labk3w25 llvyczd9hn dtbwig9m34 114290ylk6 9y7f17h88r yngbv4y2bp 0xp80hdogd 
+      1226       1226       1220       1216       1216       1207       1204 
+ppildsrvkl f6aq14y09g 0jgsonnndu pwgji1tuko 55hbmqaela tk51z87twv fm89u29kv7 
+      1203       1198       1197       1196       1190       1186       1185 
+dzhwxl5uie    (Other) 
+      1184   10382235 
+[1] "-"
+[1] "---------------------------"
+[1] "-"
+[1] "action"
+ Factor w/ 360 levels "","active","ajax_check_dates",..: 30 44 30 44 30 44 30 37 25 30 ...
+NULL
+                                show                                index 
+                             2768278                               843699 
+                      search_results                          personalize 
+                              725226                               706824 
+                              search                ajax_refresh_subtotal 
+                              536057                               487744 
+                              update                     similar_listings 
+                              365130                               364624 
+                  social_connections                              reviews 
+                              339000                               320591 
+                              active                  similar_listings_v2 
+                              188036                               168788 
+                              lookup                               create 
+                              162041                               155887 
+                           dashboard                       header_userpic 
+                              152952                               141830 
+                         collections                                 edit 
+                              124417                               109083 
+                           campaigns                      track_page_view 
+                              105028                                81117 
+                                                         unavailabilities 
+                               79626                                78317 
+                                 qt2                        notifications 
+                               64651                                59392 
+                       confirm_email                            requested 
+                               58726                                57034 
+                            identity                     ajax_check_dates 
+                               53631                                52517 
+                    show_personalize                         ask_question 
+                               50434                                44063 
+                            listings                         authenticate 
+                               43656                                42930 
+                 calendar_tab_inner2                 travel_plans_current 
+                               42198                                38195 
+                   edit_verification                    ajax_lwlb_contact 
+                               33434                                33413 
+         other_hosting_reviews_first                      recommendations 
+                               31045                                30592 
+                         impressions                       manage_listing 
+                               27787                                26618 
+                               click                      complete_status 
+                               25571                                24674 
+       ajax_photo_widget_form_iframe                  payment_instruments 
+                               24442                                23573 
+               message_to_host_focus                               verify 
+                               21636                                21372 
+                     payment_methods                cancellation_policies 
+                               19800                                19262 
+                            callback                             settings 
+                               19132                                16766 
+     custom_recommended_destinations                              pending 
+                               16541                                16000 
+                         profile_pic               populate_help_dropdown 
+                               15819                                15313 
+              message_to_host_change                    ajax_image_upload 
+                               14224                                13570 
+                                view                           kba_update 
+                               13159                                12693 
+                          references                                   my 
+                               11395                                11315 
+              ajax_get_referrals_amt                                  new 
+                               11306                                11108 
+                   agree_terms_check                    apply_reservation 
+                               10938                                10915 
+                             connect                 recommended_listings 
+                               10114                                10003 
+                                 faq               populate_from_facebook 
+                                9475                                 9181 
+                             account                            available 
+                                9040                                 8729 
+                         jumio_token                          qt_reply_v2 
+                                8686                                 8534 
+                        signup_login            request_new_confirm_email 
+                                8408                                 7933 
+                                 kba                    handle_vanity_url 
+                                7922                                 7921 
+                  coupon_field_focus                  phone_number_widget 
+                                7608                                 7326 
+                  open_graph_setting                             set_user 
+                                7230                                 7012 
+                        faq_category                   apply_coupon_click 
+                                6598                                 6223 
+                         reviews_new                   apply_coupon_error 
+                                5827                                 5566 
+             apply_coupon_error_type                localization_settings 
+                                5550                                 5414 
+               languages_multiselect                        at_checkpoint 
+                                5405                                 5170 
+                      jumio_redirect                               delete 
+                                5156                                 5029 
+ajax_referral_banner_experiment_type                                login 
+                                4922                                 4811 
+                      endpoint_error                   payout_preferences 
+                                4769                                 4569 
+                   complete_redirect                               status 
+                                4506                                 4480 
+           ajax_referral_banner_type                 hosting_social_proof 
+                                4460                                 4368 
+                     referrer_status                              (Other) 
+                                4268                               140389 
+[1] "-"
+[1] "---------------------------"
+[1] "-"
+[1] "action_type"
+ Factor w/ 11 levels "","booking_request",..: 1 3 1 3 1 3 1 4 8 1 ...
+NULL
+                  booking_request            click             data 
+         1126204            18773          1996183          2103770 
+    message_post           submit        -unknown-             view 
+           87103           623357          1031170          3560902 
+booking_response partner_callback           modify 
+               4            19132             1139 
+[1] "-"
+[1] "---------------------------"
+[1] "-"
+[1] "action_detail"
+ Factor w/ 156 levels "","cancellation_policies",..: 1 25 1 25 1 25 1 27 25 1 ...
+NULL
+          view_search_results                            p3 
+                      1776885                       1376550 
+                                                  -unknown- 
+                      1126204                       1031141 
+      wishlist_content_update                  user_profile 
+                       706824                        656839 
+  change_trip_characteristics              similar_listings 
+                       487744                        364624 
+      user_social_connections                update_listing 
+                       336799                        269779 
+              listing_reviews                     dashboard 
+                       269021                        152952 
+               user_wishlists                header_userpic 
+                       152672                        141830 
+               message_thread                  edit_profile 
+                       132395                        108686 
+                 message_post                  contact_host 
+                        87103                         81041 
+            unavailable_dates            confirm_email_link 
+                        77795                         58422 
+                  create_user     change_contact_host_dates 
+                        54878                         52517 
+  user_profile_content_update                  user_reviews 
+                        50434                         49665 
+                           p5                         login 
+                        48167                         38378 
+                   your_trips                            p1 
+                        38195                         37976 
+                notifications         profile_verifications 
+                        37355                         33434 
+                 reservations                 user_listings 
+                        32481                         31971 
+                your_listings       listing_recommendations 
+                        30980                         30215 
+                  update_user          create_phone_numbers 
+                        29008                         28336 
+                           p4    update_listing_description 
+                        28030                         26980 
+          update_user_profile                manage_listing 
+                        26689                         26618 
+          payment_instruments account_notification_settings 
+                        23483                         21802 
+        message_to_host_focus                        signup 
+                        21636                         21494 
+        cancellation_policies                oauth_response 
+                        19262                         19132 
+                message_inbox                  view_listing 
+                        18718                         18474 
+       message_to_host_change               list_your_space 
+                        14224                         14098 
+                      pending                      wishlist 
+                        13603                         12308 
+           profile_references                  apply_coupon 
+                        11395                         10915 
+                  oauth_login             view_reservations 
+                        10111                          9460 
+                   login_page          post_checkout_action 
+                         9362                          8867 
+            trip_availability                  send_message 
+                         8550                          8528 
+            signup_login_page                       book_it 
+                         8408                          8085 
+               create_listing     request_new_confirm_email 
+                         7958                          7933 
+               view_locations            coupon_field_focus 
+                         7854                          7608 
+           apply_coupon_click          listing_descriptions 
+                         6223                          5735 
+           apply_coupon_error                 at_checkpoint 
+                         5566                          5170 
+   account_payout_preferences             read_policy_click 
+                         4569                          3905 
+         listing_reviews_page     cancellation_policy_click 
+                         3869                          3461 
+                 instant_book             coupon_code_click 
+                         3061                          2947 
+                       photos               request_to_book 
+                         2904                          2833 
+               user_tax_forms             popular_wishlists 
+                         2633                          2160 
+                    host_home   account_transaction_history 
+                         2103                          2033 
+   phone_verification_success                   login_modal 
+                         2032                          1977 
+            terms_and_privacy      account_privacy_settings 
+                         1944                          1943 
+              guest_itinerary                  signup_modal 
+                         1870                          1831 
+        lookup_message_thread                user_languages 
+                         1793                          1475 
+              profile_reviews             your_reservations 
+                         1292                          1283 
+         delete_phone_numbers               change_or_alter 
+                         1241                          1116 
+      account_payment_methods                 wishlist_note 
+                         1005                           961 
+    translate_listing_reviews                 click_reviews 
+                          951                           925 
+              admin_templates                       (Other) 
+                          835                         13210 
+[1] "-"
+[1] "---------------------------"
+[1] "-"
+[1] "device_type"
+ Factor w/ 14 levels "Android Phone",..: 6 6 6 6 6 6 6 6 6 6 ...
+NULL
+                   Android Phone                      iPad Tablet 
+                          839637                           683414 
+                          iPhone                      Mac Desktop 
+                         2105031                          3594286 
+                       -unknown-                  Windows Desktop 
+                          211279                          2658539 
+Android App Unknown Phone/Tablet                       Blackberry 
+                          273652                              979 
+                      Chromebook                        iPodtouch 
+                           22348                             8198 
+                   Linux Desktop                      Opera Phone 
+                           28373                               68 
+                          Tablet                    Windows Phone 
+                          139886                             2047 
+[1] "-"
+[1] "---------------------------"
+[1] "-"
+[1] "secs_elapsed"
+ num [1:10567737] 319 67753 301 22141 435 ...
+NULL
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0     229    1147   19410    8444 1800000  136031 
+[1] "-"
+[1] "---------------------------"
+[1] "-"

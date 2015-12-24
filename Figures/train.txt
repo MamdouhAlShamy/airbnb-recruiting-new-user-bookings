@@ -1,0 +1,137 @@
+train       16 x 213,451
+
+train:
+------------------------------------------------------------
+* id: Factor w/ 213451 levels "00k8dbf80o","024ttsjo1d",..: 476 234 142 336 242 704 609 13 293 201 ...
+* date_account_created: Factor w/ 1634 levels "2010-01-01","2010-01-02",..: 171 190 183 191 182 1 2 3
+* timestamp_first_active: num [1:213451] 2.01e+13 2.01e+13 2.01e+13 2.01e+13 2.01e+13 ...
+* date_first_booking: Factor w/ 1977 levels "","2010-01-02",..: 1 1 182 214 35 2 4 10 179 3 ...
+* gender: Factor w/ 4 levels "FEMALE","MALE",..: 4 2 1 1 4 4 1 1 1 4 ...
+* age: num [1:213451] NA 38 56 42 41 NA 46 47 50 46 ...
+* signup_method: Factor w/ 3 levels "basic","facebook",..: 2 2 1 2 1 1 1 1 1 1 ...
+* signup_flow: int [1:213451] 0 0 3 0 0 0 0 0 0 0 ...
+* language: Factor w/ 25 levels "de","en","es",..: 2 2 2 2 2 2 2 2 2 2 ...
+* affiliate_channel: Factor w/ 8 levels "content","direct",..: 2 5 2 2 2 3 3 2 3 3 ...
+* affiliate_provider: Factor w/ 18 levels "craigslist","direct",..: 2 4 2 2 2 5 1 2 1 1 ...
+* first_affiliate_tracked: Factor w/ 8 levels "","linked","omg",..: 6 6 6 6 6 3 6 3 6 3 ...
+* signup_app: Factor w/ 4 levels "Moweb","Web",..: 2 2 2 2 2 2 2 2 2 2 ...
+* first_device_type: Factor w/ 9 levels "Android Phone",..: 6 6 8 6 6 6 6 6 6 6 ...
+* first_browser: Factor w/ 52 levels "Android Browser",..: 3 3 7 6 3 3 11 11 11 6 ...
+* country_destination: Factor w/ 12 levels "CA","DE","ES",..: 7 7 11 9 11 11 11 11 11 11 ...
+
+
+
+train:
+-------------------------------------------------
+[1] "date_account_created"
+
+[1] "timestamp_first_active"
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+2.009e+13 2.012e+13 2.013e+13 2.013e+13 2.014e+13 2.014e+13
+
+[1] "date_first_booking"
+
+[1] "gender"
+   FEMALE      MALE     OTHER -unknown- 
+    63041     54440       282     95688 
+
+[1] "age"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   1.00   28.00   34.00   49.67   43.00 2014.00   87990 
+
+[1] "signup_method"
+   basic facebook   google 
+  152897    60008      546 
+
+[1] "signup_flow"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   0.000   0.000   3.267   0.000  25.000 
+
+[1] "language"
+    de     en     es     fr     ca     cs     da     el     fi     hr     hu 
+   732 206314    915   1172      5     32     58     24     14      2     18 
+    id     is     it     ja     ko     nl     no     pl     pt     ru     sv 
+    22      5    514    225    747     97     30     54    240    389    122 
+    th     tr     zh 
+    24     64   1632 
+
+[1] "affiliate_channel"
+      content        direct         other sem-non-brand           seo 
+         3948        137727          8961         18844          8663 
+          api   remarketing     sem-brand 
+         8167          1096         26045 
+
+[1] "affiliate_provider"
+         craigslist              direct            facebook              google 
+               3471              137426                2273               51693 
+              other                vast               baidu                bing 
+              12549                 829                  29                2328 
+               daum     email-marketing facebook-open-graph                 gsp 
+                  1                 166                 545                 453 
+             meetup               naver           padmapper                wayn 
+                347                  52                 768                   8 
+              yahoo              yandex 
+                496                  17 
+
+[1] "first_affiliate_tracked"
+                     linked           omg       product tracked-other 
+         6065         46287         43982          1556          6156 
+    untracked     local ops     marketing 
+       109232            34           139 
+
+[1] "signup_app"
+  Moweb     Web Android     iOS 
+   6261  182717    5454   19019 
+
+[1] "first_device_type"
+     Android Phone     Android Tablet    Desktop (Other)               iPad 
+              2803               1292               1199              14339 
+            iPhone        Mac Desktop      Other/Unknown    Windows Desktop 
+             20759              89600              10667              72716 
+SmartPhone (Other) 
+                76 
+
+[1] "first_browser"
+     Android Browser         AOL Explorer               Chrome 
+                 851                  245                63845 
+       Chrome Mobile             Chromium              Firefox 
+                1270                   73                33655 
+                  IE        Mobile Safari Palm Pre web browser 
+               21068                19274                    1 
+            RockMelt               Safari            -unknown- 
+                  24                45169                27266 
+          Apple Mail                Arora        Avant Browser 
+                  36                    1                    4 
+  BlackBerry Browser               Camino            CometBird 
+                  53                    9                   11 
+       Comodo Dragon             Conkeror             CoolNovo 
+                   2                    1                    6 
+       Crazy Browser                 Epic                Flock 
+                   2                    1                    2 
+           Googlebot         Google Earth            IceDragon 
+                   1                    1                    1 
+           IceWeasel            IE Mobile                 Iron 
+                  13                   36                   17 
+      Kindle Browser              Maxthon       Mobile Firefox 
+                   1                   46                   30 
+             Mozilla          NetNewsWire              OmniWeb 
+                   3                    1                    2 
+               Opera           Opera Mini         Opera Mobile 
+                 188                    4                    2 
+        Outlook 2007            Pale Moon      PS Vita browser 
+                   1                   12                    1 
+           SeaMonkey                 Silk            SiteKiosk 
+                  11                  124                   24 
+         SlimBrowser       Sogou Explorer            Stainless 
+                   2                   33                    1 
+          TenFourFox     TheWorld Browser           wOSBrowser 
+                   8                    2                    6 
+      Yandex.Browser 
+                  11
+                  
+[1] "country_destination"
+    CA     DE     ES     FR     GB     IT    NDF     NL  other     PT     US 
+  1428   1061   2249   5023   2324   2835 124543    762  10094    217  62376 
+    AU 
+   539 
+

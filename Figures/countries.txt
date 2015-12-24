@@ -1,0 +1,71 @@
+
+countries:
+-------------------------------------------------------------
+"# dim: 10 x 7"
+
+*  country_destination : Factor w/ 10 levels "AU","CA","DE",..: 1 2 3 4 5 6 7 8 9 10
+*  lat_destination : num [1:10] -26.9 62.4 51.2 39.9 46.2 ...
+*  lng_destination : num [1:10] 133.28 -96.82 10.45 -2.49 2.21 ...
+*  distance_km : num [1:10] 15298 2828 7880 7731 7683 ...
+*  destination_km2 : num [1:10] 7741220 9984670 357022 505370 643801 ...
+*  destination_language : Factor w/ 7 levels "deu","eng","fra",..: 2 2 1 7 3 2 4 5 6 2
+*  language_levenshtein_distance : num [1:10] 0 0 72.6 92.2 92.1 ...
+
+****
+
+"country_destination"
+ Factor w/ 10 levels "AU","CA","DE",..: 1 2 3 4 5 6 7 8 9 10
+NULL
+AU CA DE ES FR GB IT NL PT US 
+ 1  1  1  1  1  1  1  1  1  1 
+"-"
+"---------------------------"
+"-"
+"lat_destination"
+ num [1:10] -26.9 62.4 51.2 39.9 46.2 ...
+NULL
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ -26.85   39.64   44.05   39.80   51.89   62.39 
+"-"
+"---------------------------"
+"-"
+"lng_destination"
+ num [1:10] 133.28 -96.82 10.45 -2.49 2.21 ...
+NULL
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-96.820  -6.738  -0.139  -4.262   9.163 133.300 
+"-"
+"---------------------------"
+"-"
+"distance_km"
+ num [1:10] 15298 2828 7880 7731 7683 ...
+NULL
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      0    7002    7604    7182    7842   15300 
+"-"
+"---------------------------"
+"-"
+"destination_km2"
+ num [1:10] 7741220 9984670 357022 505370 643801 ...
+NULL
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  41540  258000  431200 2974000 5967000 9985000 
+"-"
+"---------------------------"
+"-"
+"destination_language"
+ Factor w/ 7 levels "deu","eng","fra",..: 2 2 1 7 3 2 4 5 6 2
+NULL
+deu eng fra ita nld por spa 
+  1   4   1   1   1   1   1 
+"-"
+"---------------------------"
+"-"
+"language_levenshtein_distance"
+ num [1:10] 0 0 72.6 92.2 92.1 ...
+NULL
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    0.00   67.91   50.50   91.40   95.45 
+"-"
+"---------------------------"
+"-"
