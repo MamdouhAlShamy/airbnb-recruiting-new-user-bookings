@@ -1,0 +1,15 @@
+sessions
+UniqueId 135,483
+
+
+# sessions_test
+
+dim  		6 x 4,995,285
+uniq_id		61,668
+
+
+
+# sessions_train
+
+dim 		6 x 5,537,958
+uniq_id		73,815

@@ -19,7 +19,7 @@ train:
 * first_browser: Factor w/ 52 levels "Android Browser",..: 3 3 7 6 3 3 11 11 11 6 ...
 * country_destination: Factor w/ 12 levels "CA","DE","ES",..: 7 7 11 9 11 11 11 11 11 11 ...
 
-
+CREATE TABLE Train (id VARCHAR(255), date_account_created TEXT, timestamp_first_active INT, date_first_booking TEXT, gender VARCHAR(255), age INT, signup_method VARCHAR(255), signup_flow INT, language VARCHAR(255), affiliate_channel VARCHAR(255), affiliate_provider VARCHAR(255), first_affiliate_tracked VARCHAR(255), signup_app VARCHAR(255), first_device_type VARCHAR(255), first_browser VARCHAR(255), country_destination TEXT);
 
 train:
 -------------------------------------------------
