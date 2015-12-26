@@ -1,0 +1,38 @@
+
+# train
+
+.mode csv
+
+CREATE TABLE Train (id VARCHAR(255), date_account_created TEXT, timestamp_first_active INT, date_first_booking TEXT, gender VARCHAR(255), age INT, signup_method VARCHAR(255), signup_flow INT, language VARCHAR(255), affiliate_channel VARCHAR(255), affiliate_provider VARCHAR(255), first_affiliate_tracked VARCHAR(255), signup_app VARCHAR(255), first_device_type VARCHAR(255), first_browser VARCHAR(255), country_destination TEXT);
+
+.import Data/Raw/train_users_2.csv Train
+
+# test
+.mode csv
+
+CREATE TABLE Test (id VARCHAR(255), date_account_created TEXT, timestamp_first_active INT, date_first_booking TEXT, gender VARCHAR(255), age INT, signup_method VARCHAR(255), signup_flow INT, language VARCHAR(255), affiliate_channel VARCHAR(255), affiliate_provider VARCHAR(255), first_affiliate_tracked VARCHAR(255), signup_app VARCHAR(255), first_device_type VARCHAR(255), first_browser VARCHAR(255));
+
+.import Data/Raw/test_users.csv Test
+
+# Sessions
+.mode csv
+
+CREATE TABLE sessions (user_id TEXT, action TEXT, action_type TEXT, action_detail TEXT, device_type TEXT, secs_elapsed INT);
+
+.import Data/Raw/sessions.csv Sessions
+
+
+
+# Get sessions_train
+
+.mode csv
+.output sessions_train.csv
+Select * from Sessions where user_id (Select id from Train)
+.output stdout
+
+# Get sessions_test
+
+.mode csv
+.output sessions_test.csv
+Select * from Sessions where user_id (Select id from Test)
+.output stdout
