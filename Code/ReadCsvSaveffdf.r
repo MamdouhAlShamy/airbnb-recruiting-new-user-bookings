@@ -1,7 +1,7 @@
 suppressMessages(library(ff))
 suppressMessages(library(ffbase))
 
-dataPath = "/media/mms/HomeLand/Know/DataAnalysisProjects/Airbnb/Data/Raw/"
+dataPath = "Data/Raw/"
 
 readCsvSaveffdf = function(src, dest){
 	data <-  read.csv.ffdf(file =paste0(dataPath, src, ".csv")

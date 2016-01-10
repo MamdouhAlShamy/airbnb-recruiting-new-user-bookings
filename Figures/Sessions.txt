@@ -1,5 +1,5 @@
 sessions    6 x 10,567,737
-
+uniq id 135,485
 Sessions:
 --------------------------------------------
 * user_id: Factor w/ 135484 levels "4grx6yxeby","4rvqpxoh3h",..: 6 6 6 6 6 6 6 6 6 6 ...

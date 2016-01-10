@@ -42,19 +42,56 @@ getNumberOfUniqueIds = function(src){
 }
 
 
-plotPieChart = function(data, i){
-	featureNameN = colnames(data)[i]
-  	feature_df <<- data.frame(featureName = data[, i])
+plotPieChart = function(data, outputPath, featureIndex){
+	featureName = colnames(data)[featureIndex]
+  	feature_df <<- data.frame(featureName = data[, featureIndex])
 
-	png(paste0("Figures/sessions_train/", featureNameN,".png", sp = ""))
+	png(paste0(outputPath, featureName,".png", sp = ""))
+
 	pie <- ggplot(feature_df, aes(x = factor(1),  fill = factor(featureName))) +
  	geom_bar(width = 5) +
  	coord_polar(theta = "y") +
  	scale_fill_brewer(palette = "Set3") +
- 	labs(title = featureNameN)
+ 	labs(title = featureName) 
+ 	# theme(legend.position="bottom")
+
 
  	print(pie)
-
 	dev.off()
 
+}
+
+plotHistogram = function(data, outputPath, featureIndex){
+
+	featureName = colnames(data)[featureIndex]
+  	feature_df <<- data.frame(featureName = data[, featureIndex])
+
+  	featureSummary = summary(feature_df$featureName)
+    
+	png(paste0(outputPath, featureName,".png", sp = ""))
+
+    # Histogram
+    histogram = ggplot(data = feature_df
+                       , aes(x = feature_df$featureName)) +
+      xlab(featureName) +
+      ylab("Freq") +
+      geom_histogram() +
+      geom_vline(xintercept = featureSummary["Mean"]
+                 , color = "red"
+                 , size = 1) +
+      geom_vline(xintercept = featureSummary["Median"]
+                 , color = "blue"
+                 , size = 1) +
+      scale_x_log10()
+    
+ 	print(histogram)
+	dev.off()
+
+}
+
+SummaryTrainOrTest = function(data, outputPath){
+	plotHistogram(data, outputPath, 6)
+
+	for (i in c(5,7,9:ncol(data)))
+		plotPieChart(data, outputPath, i)
 }
