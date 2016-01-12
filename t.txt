@@ -1,0 +1,299 @@
+List of 3
+ $ virtual: 'data.frame':	16 obs. of  7 variables:
+ .. $ VirtualVmode     : chr  "integer" "integer" "double" "integer" ...
+ .. $ AsIs             : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ .. $ VirtualIsMatrix  : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ .. $ PhysicalIsMatrix : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ .. $ PhysicalElementNo: int  1 2 3 4 5 6 7 8 9 10 ...
+ .. $ PhysicalFirstCol : int  1 1 1 1 1 1 1 1 1 1 ...
+ .. $ PhysicalLastCol  : int  1 1 1 1 1 1 1 1 1 1 ...
+ .. - attr(*, "Dim")= int  213451 16
+ .. - attr(*, "Dimorder")= int  1 2
+ $ physical: List of 16
+ .. $ id                     : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$id.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:213451] "00k8dbf80o" "024ttsjo1d" "027hmmfefk" "02n2968rji" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ date_account_created   : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$date_account_created.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:1634] "2010-01-01" "2010-01-02" "2010-01-03" "2010-01-04" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ timestamp_first_active : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "double"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$timestamp_first_active.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ date_first_booking     : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$date_first_booking.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:1977] "" "2010-01-02" "2010-01-04" "2010-01-05" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ gender                 : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$gender.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:4] "FEMALE" "MALE" "OTHER" "-unknown-"
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ age                    : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "double"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$age.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ signup_method          : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$signup_method.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:3] "basic" "facebook" "google"
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ signup_flow            : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$signup_flow.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ language               : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$language.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:25] "de" "en" "es" "fr" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ affiliate_channel      : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$affiliate_channel.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:8] "content" "direct" "other" "sem-non-brand" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ affiliate_provider     : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$affiliate_provider.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:18] "craigslist" "direct" "facebook" "google" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ first_affiliate_tracked: list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$first_affiliate_tracked.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:8] "" "linked" "omg" "product" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ signup_app             : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$signup_app.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:4] "Moweb" "Web" "Android" "iOS"
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ first_device_type      : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$first_device_type.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:9] "Android Phone" "Android Tablet" "Desktop (Other)" "iPad" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ first_browser          : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$first_browser.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:52] "Android Browser" "AOL Explorer" "Chrome" "Chrome Mobile" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ .. $ country_destination    : list()
+ ..  ..- attr(*, "physical")=Class 'ff_pointer' <externalptr> 
+ ..  .. ..- attr(*, "vmode")= chr "integer"
+ ..  .. ..- attr(*, "maxlength")= int 213451
+ ..  .. ..- attr(*, "pattern")= chr "ffdf"
+ ..  .. ..- attr(*, "filename")= chr "/home/tabarydj/Documents/Airbnb/Data/Raw/train_users_2/data$country_destination.ff"
+ ..  .. ..- attr(*, "pagesize")= int 65536
+ ..  .. ..- attr(*, "finalizer")= chr "close"
+ ..  .. ..- attr(*, "finonexit")= logi TRUE
+ ..  .. ..- attr(*, "readonly")= logi FALSE
+ ..  .. ..- attr(*, "caching")= chr "mmnoflush"
+ ..  ..- attr(*, "virtual")= list()
+ ..  .. ..- attr(*, "Length")= int 213451
+ ..  .. ..- attr(*, "Symmetric")= logi FALSE
+ ..  .. ..- attr(*, "Levels")= chr [1:12] "CA" "DE" "ES" "FR" ...
+ ..  .. ..- attr(*, "ramclass")= chr "factor"
+ ..  .. ..- attr(*, "class")= chr "virtual"
+ .. .. - attr(*, "class") =  chr [1:2] "ff_vector" "ff"
+ $ row.names:  NULL
+- attributes: List of 2
+ .. $ names: chr [1:3] "virtual" "physical" "row.names"
+ .. $ class: chr "ffdf"
+[1] "ready to model"

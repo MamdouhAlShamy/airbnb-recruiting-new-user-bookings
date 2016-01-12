@@ -7,9 +7,15 @@ source(paste0(codePath, "DataManipulation.r"))
 # source(paste0(codePath, "trial1.r"))
 source(paste0(codePath, "featureSelection.r"))
 
+dataSrc = "train_users_2"
+featureSelectionBoruta(dataSrc)
 
-featureSelectionRegSub("train_users_2")
-plotfeatureSelectionRegSubResults()
+# featureSelectionRegSubConfig(dataSrc, nbest=5, nvmax=15, method="exhaustive")
+
+
+# featureSelectionRegSub()
+# plotfeatureSelectionRegSubResults()
+
 
 # featureSelection()
 
